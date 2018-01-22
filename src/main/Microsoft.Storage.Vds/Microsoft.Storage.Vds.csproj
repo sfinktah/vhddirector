@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC7F5B7A-A16B-4712-8942-F6D3E6ECB7F6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Microsoft.Storage.Vds</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Microsoft.Storage.Vds.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Microsoft.Storage.Vds.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Compile Include="..\AssemblyProperties.cs">
+      <Link>AssemblyProperties.cs</Link>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Properties\Resources.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\ChangeAttributesParameters.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\Attribute.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\CreatePartitionParameters.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Wrapper.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Disk.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\AdvancedDisk.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsAdviseSink.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\AdviseSink.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Async.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_ASYNC_OUTPUT_TYPE.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\cp.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\cv.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\bvp.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\cl.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\ct.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\cpg.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_ASYNC_OUTPUT_INFO.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_ASYNC_OUTPUT.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Collection!1.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ControllerStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ControllerProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Controller.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ControllerPort.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DiskStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DiskFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunReserveMode.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DiskExtentType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PartitionStyle.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DiskProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DiskSignature.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DiskExtent.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveExtent.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Drive.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ServiceRecoverAction.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ServiceEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ControllerEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortalEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\TargetEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortalGroupEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PackEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DiskEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumeEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PartitionEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveLetterEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\FileSystemEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\MountPointEventArgs.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Globals.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HbaPortType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HbaPortStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HbaPortSpeedFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HbaPortProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\WorldWideName.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HbaPort.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IMockObject.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IscsiLoginType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IscsiAuthorizationType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IscsiLoginFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\InitiatorAdapterProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\InitiatorAdapter.cs" />
+    <Compile Include="Microsoft\Storage\Vds\InitiatorPortalProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\InitiatorPortal.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VdsPathPolicy.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PathPolicy.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LoadBalancePolicy.cs" />
+    <Compile Include="Microsoft\Storage\Vds\InteropHelpers.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HintFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\UnmaskingListType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Hints.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Hints2.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Lun.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunHints.cs" />
+    <Compile Include="Microsoft\Storage\Vds\UnmaskingList.cs" />
+    <Compile Include="Microsoft\Storage\Vds\FibreChannelUnmaskingList.cs" />
+    <Compile Include="Microsoft\Storage\Vds\UnknownUnmaskingList.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IscsiUnmaskingList.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunPlexType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunPlexStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunPlexFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunPlexProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunPlex.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_NOTIFICATION_EVENT.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_NOTIFICATION_TARGET_TYPE.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_PACK_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_DISK_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_VOLUME_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_PARTITION_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_DRIVE_LETTER_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_FILE_SYSTEM_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_MOUNT_POINT_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_SERVICE_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_SUB_SYSTEM_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_CONTROLLER_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_DRIVE_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_LUN_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_PORT_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_PORTAL_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_TARGET_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_PORTAL_GROUP_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_NOTIFICATION.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VDS_NOTIFICATION_INFO.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PackStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PackFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PackProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Pack.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\PartitionFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\PartitionInfo.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\MbrPartitionInfo.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\GptPartitionInfo.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\GptPartitionInfoName.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\PartitionProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\Partition.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\MbrPartition.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Advanced\GptPartition.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PathStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LoadBalancePolicyType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LoadBalanceSupportFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemEndpoint.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ServerEndpoint.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PathInfo.cs" />
+    <Compile Include="Microsoft\Storage\Vds\FullPathId.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Path.cs" />
+    <Compile Include="Microsoft\Storage\Vds\FibreChannelPath.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IscsiPath.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortalStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortalProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Portal.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortalGroupProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\PortalGroup.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ProviderFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ProviderType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HardwareProviderType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VersionSupportFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ProviderProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Provider.cs" />
+    <Compile Include="Microsoft\Storage\Vds\HardwareProvider.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SoftwareProvider.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ServiceFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\QueryProviderFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ServiceProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ServiceLoader.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Service.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemInterconnectFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemSupportedRaidTypes.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystemProperties2.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SubSystem.cs" />
+    <Compile Include="Microsoft\Storage\Vds\TargetProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Target.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\Utilities.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IEnumVdsObject.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsProvider.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsProviderSupport.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsAsync.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VdsException.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsHwProvider.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsHwProviderType2.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsHwProviderType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsSubSystem.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsSubSystem2.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsSubSystemIscsi.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsSubSystemImportTarget.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsSubSystemNaming.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsSubSystemInterconnect.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsControllerPort.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsController.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsControllerControllerPort.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsDrive.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsLun.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsLunNaming.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsLunControllerPorts.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsLunMpio.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsLunIscsi.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsLunNumber.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsLunPlex.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsHbaPort.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsMaintenance.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsIscsiPortal.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsIscsiPortalLocal.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsIscsiTarget.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsIscsiTargetDiscovery.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsIscsiPortalGroup.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsIscsiInitiatorAdapter.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsIscsiInitiatorPortal.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\ObjectType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsServiceLoader.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\VdsServiceLoaderClass.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsService.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsServiceHba.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsServiceIscsi.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsServiceUninstallDisk.cs" />
+    <Compile Include="Microsoft\Storage\Vds\StorageIdentifierCodeSet.cs" />
+    <Compile Include="Microsoft\Storage\Vds\StorageIdentifierType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\StorageBusType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\InterconnectAddressType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VdsStorageIdentifier.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VdsStorageDeviceIdDescriptor.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VdsInterconnect.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VdsLunInformation.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interconnect.cs" />
+    <Compile Include="Microsoft\Storage\Vds\StorageIdentifier.cs" />
+    <Compile Include="Microsoft\Storage\Vds\StorageDeviceIdDescriptor.cs" />
+    <Compile Include="Microsoft\Storage\Vds\LunInformation.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Status.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Health.cs" />
+    <Compile Include="Microsoft\Storage\Vds\TransitionState.cs" />
+    <Compile Include="Microsoft\Storage\Vds\FileSystemType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\InputDisk.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IpsecFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IPAddressType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IPAddress.cs" />
+    <Compile Include="Microsoft\Storage\Vds\IpsecKey.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SharedSecret.cs" />
+    <Compile Include="Microsoft\Storage\Vds\SecureStringAnsiHandle.cs" />
+    <Compile Include="Microsoft\Storage\Vds\MaintenanceOperation.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsSwProvider.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsPack.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsDisk.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsVolume.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsVolumeMF.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsVolumePlex.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsAdvancedDisk.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsCreatePartitionEx.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Interop\IVdsDiskOnline.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumeStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumeType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumeFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\FileSystemFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveLetterFlags.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumeProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\FileSystemProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\DriveLetterProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\ReparsePointProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\Volume.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumePlexStatus.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumePlexType.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumePlexProperties.cs" />
+    <Compile Include="Microsoft\Storage\Vds\VolumePlex.cs" />
+    <EmbeddedResource Include="Microsoft.Storage.Vds.Properties.Resources.resources" />
+  </ItemGroup>
+</Project>

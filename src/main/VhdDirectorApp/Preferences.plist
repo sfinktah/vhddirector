@@ -1,0 +1,9 @@
+{
+	Theme = {
+		GreenPartition = {
+			Hue = "1.0";
+			Saturation = "1.0";
+			Luminance = "1.1";
+		};
+	};
+}

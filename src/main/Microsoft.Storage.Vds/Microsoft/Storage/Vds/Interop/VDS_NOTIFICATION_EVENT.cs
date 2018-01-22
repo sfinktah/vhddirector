@@ -1,0 +1,49 @@
+﻿namespace Microsoft.Storage.Vds.Interop
+{
+    using System;
+
+    public enum VDS_NOTIFICATION_EVENT
+    {
+        VDS_NF_CONTROLLER_ARRIVE = 0x67,
+        VDS_NF_CONTROLLER_DEPART = 0x68,
+        VDS_NF_DISK_ARRIVE = 8,
+        VDS_NF_DISK_DEPART = 9,
+        VDS_NF_DISK_MODIFY = 10,
+        VDS_NF_DRIVE_ARRIVE = 0x69,
+        VDS_NF_DRIVE_DEPART = 0x6a,
+        VDS_NF_DRIVE_LETTER_ASSIGN = 0xca,
+        VDS_NF_DRIVE_LETTER_FREE = 0xc9,
+        VDS_NF_DRIVE_MODIFY = 0x6b,
+        VDS_NF_FILE_SYSTEM_FORMAT_PROGRESS = 0xcc,
+        VDS_NF_FILE_SYSTEM_MODIFY = 0xcb,
+        VDS_NF_LUN_ARRIVE = 0x6c,
+        VDS_NF_LUN_DEPART = 0x6d,
+        VDS_NF_LUN_MODIFY = 110,
+        VDS_NF_MOUNT_POINTS_CHANGE = 0xcd,
+        VDS_NF_PACK_ARRIVE = 1,
+        VDS_NF_PACK_DEPART = 2,
+        VDS_NF_PACK_MODIFY = 3,
+        VDS_NF_PARTITION_ARRIVE = 11,
+        VDS_NF_PARTITION_DEPART = 12,
+        VDS_NF_PARTITION_MODIFY = 13,
+        VDS_NF_PORT_ARRIVE = 0x79,
+        VDS_NF_PORT_DEPART = 0x7a,
+        VDS_NF_PORTAL_ARRIVE = 0x7b,
+        VDS_NF_PORTAL_DEPART = 0x7c,
+        VDS_NF_PORTAL_GROUP_ARRIVE = 0x81,
+        VDS_NF_PORTAL_GROUP_DEPART = 130,
+        VDS_NF_PORTAL_GROUP_MODIFY = 0x83,
+        VDS_NF_PORTAL_MODIFY = 0x7d,
+        VDS_NF_SERVICE_OUT_OF_SYNC = 0x12d,
+        VDS_NF_SUB_SYSTEM_ARRIVE = 0x65,
+        VDS_NF_SUB_SYSTEM_DEPART = 0x66,
+        VDS_NF_TARGET_ARRIVE = 0x7e,
+        VDS_NF_TARGET_DEPART = 0x7f,
+        VDS_NF_TARGET_MODIFY = 0x80,
+        VDS_NF_VOLUME_ARRIVE = 4,
+        VDS_NF_VOLUME_DEPART = 5,
+        VDS_NF_VOLUME_MODIFY = 6,
+        VDS_NF_VOLUME_REBUILDING_PROGRESS = 7
+    }
+}
+

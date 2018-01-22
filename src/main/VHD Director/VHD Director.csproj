@@ -1,0 +1,818 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C371776-DF80-4053-95AA-A08AE575D771}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VHD_Director</RootNamespace>
+    <AssemblyName>VHD Director</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>images\hdd_2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\VHD Director.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\VHD Director.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\VHD Director.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\VHD Director.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyProperties.cs">
+      <Link>AssemblyProperties.cs</Link>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BcdDirector\BcdConstants.cs" />
+    <Compile Include="BcdDirector\BcdElement.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BcdDirector\BcdEnumDescriptions.cs" />
+    <Compile Include="BcdDirector\BcdGuidList.cs" />
+    <Compile Include="BcdDirector\BcdList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BcdDirector\BcdList.Designer.cs">
+      <DependentUpon>BcdList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BcdDirector\BcdObject.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BcdDirector\BcdOsDetailModel.cs" />
+    <Compile Include="BcdDirector\BcdOsDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BcdDirector\BcdOsDetailView.Designer.cs">
+      <DependentUpon>BcdOsDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BcdDirector\BcdOsDetailViewLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BcdDirector\BcdOsDetailViewLine.Designer.cs">
+      <DependentUpon>BcdOsDetailViewLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BcdDirector\BcdOsSummaryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BcdDirector\BcdOsSummaryView.Designer.cs">
+      <DependentUpon>BcdOsSummaryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BcdDirector\BcdStore.CS">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BcdDirector\GuidItem.cs" />
+    <Compile Include="BcdDirector\OS.cs" />
+    <Compile Include="BitArrayBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BitArrayBar.Designer.cs">
+      <DependentUpon>BitArrayBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BitmapRaw.cs" />
+    <Compile Include="BlackProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BlackProgressBar.Designer.cs">
+      <DependentUpon>BlackProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckUpdates.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClusterBitmaps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClusterBitmaps.Designer.cs">
+      <DependentUpon>ClusterBitmaps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClusterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClusterForm.Designer.cs">
+      <DependentUpon>ClusterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiskPartitionModel.cs" />
+    <Compile Include="DownloadUnpackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadUnpackForm.Designer.cs">
+      <DependentUpon>DownloadUnpackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error.designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorDetail.cs" />
+    <Compile Include="Eval.cs" />
+    <Compile Include="ExceptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExecuteTask.cs" />
+    <Compile Include="ExpandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpandForm.Designer.cs">
+      <DependentUpon>ExpandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileLockInfo.cs" />
+    <Compile Include="FileLockInfo2.cs" />
+    <Compile Include="FileLockInfo3.cs" />
+    <Compile Include="FindVolumes.cs" />
+    <Compile Include="Format.cs" />
+    <Compile Include="GetDiskDrivesAndRelatedPartitions.cs" />
+    <Compile Include="GreenPartitionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GreenPartitionView.Designer.cs">
+      <DependentUpon>GreenPartitionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GreenPartitionViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GreenPartitionViewForm.Designer.cs">
+      <DependentUpon>GreenPartitionViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HandledExceptionManager.cs" />
+    <Compile Include="ISharePaintBuffer.cs" />
+    <Compile Include="LaurentEtiemble.cs" />
+    <Compile Include="LogicalDiskModel.cs" />
+    <Compile Include="MyLabel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyLabel2.Designer.cs" />
+    <Compile Include="NativeWindowTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartitionController.cs" />
+    <Compile Include="PList.cs" />
+    <Compile Include="PListViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PListViewerForm.Designer.cs">
+      <DependentUpon>PListViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PListViewerForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PListViewerForm2.Designer.cs">
+      <DependentUpon>PListViewerForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences.cs" />
+    <Compile Include="RotateWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RotateWait.Designer.cs">
+      <DependentUpon>RotateWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RtfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RtfForm.Designer.cs">
+      <DependentUpon>RtfForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateVhdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateVhdForm.Designer.cs">
+      <DependentUpon>CreateVhdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiskModel.cs" />
+    <Compile Include="DiskRoundedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiskRoundedPanel.Designer.cs">
+      <DependentUpon>DiskRoundedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiskUsageController.cs" />
+    <Compile Include="DiskUsageModel.cs" />
+    <Compile Include="DiskUsageView.cs" />
+    <Compile Include="DownloadFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadFileForm.Designer.cs">
+      <DependentUpon>DownloadFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileDownloader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormatBytes.cs" />
+    <Compile Include="GetDisks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetDisks.Designer.cs">
+      <DependentUpon>GetDisks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IListPanel.cs" />
+    <Compile Include="InterfaceTests.cs" />
+    <Compile Include="ITransparentControl.cs" />
+    <Compile Include="MyFont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyFont.Designer.cs">
+      <DependentUpon>MyFont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NtfsTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NtfsTest.Designer.cs">
+      <DependentUpon>NtfsTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelTestTmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelTestTmp.Designer.cs">
+      <DependentUpon>PanelTestTmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartitionRoundedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartitionRoundedPanel.Designer.cs">
+      <DependentUpon>PartitionRoundedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartitionUsageModel.cs" />
+    <Compile Include="QuickTip.cs" />
+    <Compile Include="RegistryForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistryForm1.Designer.cs">
+      <DependentUpon>RegistryForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoundedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RoundedPanel.Designer.cs">
+      <DependentUpon>RoundedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiskUsageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiskUsageForm.Designer.cs">
+      <DependentUpon>DiskUsageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShadedClusterBitmaps.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShadowPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShadowPanel.Designer.cs">
+      <DependentUpon>ShadowPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackBuffer.cs" />
+    <Compile Include="BiosPartitionRecord.cs" />
+    <Compile Include="Footer.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HextFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HextFormTest.Designer.cs">
+      <DependentUpon>HextFormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShadowPanel2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShadowPanel2.Designer.cs">
+      <DependentUpon>ShadowPanel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCredit.cs" />
+    <Compile Include="SourceCredits.cs" />
+    <Compile Include="SystemVersionInterop.cs" />
+    <Compile Include="TableLayoutPanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableLayoutPanelForm.Designer.cs">
+      <DependentUpon>TableLayoutPanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestArc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestArc.Designer.cs">
+      <DependentUpon>TestArc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestArcControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestArcControl.Designer.cs">
+      <DependentUpon>TestArcControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransparentControl.Designer.cs">
+      <DependentUpon>TransparentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransparentControl2.Designer.cs">
+      <DependentUpon>TransparentControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnhandledExceptionManager.cs" />
+    <Compile Include="UserControlDiskUsageBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDiskUsageBar.Designer.cs">
+      <DependentUpon>UserControlDiskUsageBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLayout.Designer.cs">
+      <DependentUpon>UserControlLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VhdPartitionView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VhdPartitionView.Designer.cs">
+      <DependentUpon>VhdPartitionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VhdProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VhdProperties.Designer.cs">
+      <DependentUpon>VhdProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VhdReadException.cs" />
+    <Compile Include="VirtualHardDisk.cs" />
+    <Compile Include="wmi\ComWmi.cs" />
+    <Compile Include="wmi\GetAllVolumes.cs" />
+    <Compile Include="ZoomOverlay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZoomOverlay.Designer.cs">
+      <DependentUpon>ZoomOverlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZoomOverlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZoomOverlayForm.Designer.cs">
+      <DependentUpon>ZoomOverlayForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BcdDirector\BcdList.resx">
+      <DependentUpon>BcdList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BcdDirector\BcdOsDetailView.resx">
+      <DependentUpon>BcdOsDetailView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BcdDirector\BcdOsDetailViewLine.resx">
+      <DependentUpon>BcdOsDetailViewLine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BcdDirector\BcdOsSummaryView.resx">
+      <DependentUpon>BcdOsSummaryView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BitArrayBar.resx">
+      <DependentUpon>BitArrayBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlackProgressBar.resx">
+      <DependentUpon>BlackProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClusterBitmaps.resx">
+      <DependentUpon>ClusterBitmaps.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClusterForm.resx">
+      <DependentUpon>ClusterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadUnpackForm.resx">
+      <DependentUpon>DownloadUnpackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpandForm.resx">
+      <DependentUpon>ExpandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GreenPartitionView.resx">
+      <DependentUpon>GreenPartitionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GreenPartitionViewForm.resx">
+      <DependentUpon>GreenPartitionViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyLabel2.resx">
+      <DependentUpon>MyLabel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PListViewerForm.resx">
+      <DependentUpon>PListViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RotateWait.resx">
+      <DependentUpon>RotateWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RtfForm.resx">
+      <DependentUpon>RtfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateVhdForm.resx">
+      <DependentUpon>CreateVhdForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiskRoundedPanel.resx">
+      <DependentUpon>DiskRoundedPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadFileForm.resx">
+      <DependentUpon>DownloadFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetDisks.resx">
+      <DependentUpon>GetDisks.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFont.resx">
+      <DependentUpon>MyFont.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NtfsTest.resx">
+      <DependentUpon>NtfsTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelTestTmp.resx">
+      <DependentUpon>PanelTestTmp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartitionRoundedPanel.resx">
+      <DependentUpon>PartitionRoundedPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistryForm1.resx">
+      <DependentUpon>RegistryForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoundedPanel.resx">
+      <DependentUpon>RoundedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiskUsageForm.resx">
+      <DependentUpon>DiskUsageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShadowPanel.resx">
+      <DependentUpon>ShadowPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HextFormTest.resx">
+      <DependentUpon>HextFormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShadowPanel2.resx">
+      <DependentUpon>ShadowPanel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableLayoutPanelForm.resx">
+      <DependentUpon>TableLayoutPanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestArc.resx">
+      <DependentUpon>TestArc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransparentControl.resx">
+      <DependentUpon>TransparentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDiskUsageBar.resx">
+      <DependentUpon>UserControlDiskUsageBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VhdPartitionView.resx">
+      <DependentUpon>VhdPartitionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VhdProperties.resx">
+      <DependentUpon>VhdProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZoomOverlay.resx">
+      <DependentUpon>ZoomOverlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZoomOverlayForm.resx">
+      <DependentUpon>ZoomOverlayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="images\SampleIconsInPlace.psd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Preferences.plist">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\CompactVirtualDisk.rtf" />
+    <Resource Include="Help\CompactVirtualDisk.rtf" />
+    <None Include="images\Chalkduster.ttf" />
+    <None Include="images\RosewoodStd-Regular.otf" />
+    <None Include="images\ROYALP.TTF" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\csharp_debug.csproj">
+      <Project>{1EE526D7-06F4-44D5-859C-5E401847536B}</Project>
+      <Name>csharp_debug</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeKicker.BBCode-Parser-5.0\src\trunk\CodeKicker.BBCode\CodeKicker.BBCode.csproj">
+      <Project>{1C8A5FB6-633A-43BD-B1B7-75A0DDC308F5}</Project>
+      <Name>CodeKicker.BBCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSharp.cc\CSharp.cc.csproj">
+      <Project>{18C0AEE8-8AD6-4B0E-9105-2BA70D8A6B93}</Project>
+      <Name>CSharp.cc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSharpFilters_src\CSharpFilters\CSharpFilters.csproj">
+      <Project>{ECADAA7E-AB37-45BA-AEDF-CFAEE4669297}</Project>
+      <Name>CSharpFilters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Defrag1\Defrag1.csproj">
+      <Project>{C9F848C5-8DAC-451F-B925-05B02810C56F}</Project>
+      <Name>Defrag1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiscUtils\DiscUtilsSrc-0.10\src\DiscUtils.csproj">
+      <Project>{DBB340F9-2386-43C2-A473-FA496CBE07A4}</Project>
+      <Name>DiscUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Medo\vhdapisamplerc\Source\VhdApiExample\VhdApiExample.csproj">
+      <Project>{5947B488-1F31-4C26-8774-A2969C03EFB9}</Project>
+      <Name>VhdApiExample</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Storage.Vds\Microsoft.Storage.Vds.csproj">
+      <Project>{AC7F5B7A-A16B-4712-8942-F6D3E6ECB7F6}</Project>
+      <Name>Microsoft.Storage.Vds</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VhdMount\VhdMount.csproj">
+      <Project>{2BDDF051-4FF6-4164-9D50-7B6270E5814B}</Project>
+      <Name>VhdMount</Name>
+    </ProjectReference>
+    <ProjectReference Include="Be.HexEditor.142\sources\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.csproj">
+      <Project>{26C5F25F-B450-4CAF-AD8B-B8D11AE73457}</Project>
+      <Name>Be.Windows.Forms.HexBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragondrop[1].png" />
+    <EmbeddedResource Include="dll\DiscUtils.Common.dll" />
+    <EmbeddedResource Include="dll\DiscUtils.dll" />
+    <EmbeddedResource Include="dll\Be.Windows.Forms.HexBox.dll" />
+    <EmbeddedResource Include="dll\csharp_debug.dll" />
+    <EmbeddedResource Include="images\shadow.box.40x40.for.32x32.png" />
+    <None Include="images\hdd_2.ico" />
+    <None Include="images\hdd.ico" />
+    <None Include="images\burn-disc-512.png" />
+    <None Include="images\createvhd.png" />
+    <None Include="images\burn-black.png" />
+    <None Include="images\burn-red.png" />
+    <None Include="images\burn-yellow.png" />
+    <None Include="images\burn-green.png" />
+    <EmbeddedResource Include="dll\CSharp.cc.dll" />
+    <None Include="images\BlackProgressBar\OuterRight.png" />
+    <None Include="images\BlackProgressBar\InnerFill.png" />
+    <None Include="images\BlackProgressBar\InnerLeft.png" />
+    <None Include="images\BlackProgressBar\InnerRight.png" />
+    <None Include="images\BlackProgressBar\OuterFill.png" />
+    <None Include="images\BlackProgressBar\OuterLeft.png" />
+    <None Include="images\Drag%27n%27Drop-Cut.png" />
+    <EmbeddedResource Include="dll\Defrag1.dll" />
+    <EmbeddedResource Include="dll\Microsoft.Storage.Vds.dll" />
+    <EmbeddedResource Include="dll\VDS.dll" />
+    <EmbeddedResource Include="dll\VhdMount.dll" />
+    <EmbeddedResource Include="dll\VhdApiExample.dll" />
+    <Resource Include="images\MagnifyingGlass-32-web.png" />
+    <Resource Include="images\MagnifyingGlass-64-web.png" />
+    <None Include="images\MagnifyingGlass-96-64-centered.png" />
+    <None Include="images\fragmented-22-trans.png" />
+    <None Include="images\boot-25-22-trans.png" />
+    <None Include="images\GreenPartition_Right.png" />
+    <None Include="images\GreenPartition_Fill.png" />
+    <None Include="images\GreenPartition_Fill_Unused.png" />
+    <None Include="images\GreenPartition_Left.png" />
+    <Content Include="CSharpFilters.csproj" />
+    <Content Include="handle.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="images\dead-identicon.png" />
+    <Content Include="images\MagnifyingGlass.ico" />
+    <None Include="images\ring-48.png" />
+    <None Include="images\PartitionBar\PartitionBar_Fill.png" />
+    <None Include="images\PartitionBar\PartitionBar_Fill_Unused.png" />
+    <None Include="images\PartitionBar\PartitionBar_Left.png" />
+    <None Include="images\PartitionBar\PartitionBar_Right.png" />
+    <Content Include="plugins\pro.reboot.sfinktah.contig.plist.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RecoverSpace.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_AssemblyInfoFilename="" BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

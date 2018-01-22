@@ -1,0 +1,100 @@
+﻿;/*++
+;
+;Copyright (c) 1990-2006 Microsoft Corporation All rights Reserved
+;
+;Module Name:
+;
+;    vhdbus.INF
+;--*/
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%MSFT%
+CatalogFile=vhdbus.cat
+DriverVer= 08/20/2008,1.1.651.0
+
+[DestinationDirs]
+DefaultDestDir = 12
+CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+vhdbus.sys  = 1,,
+WdfCoInstaller01005.dll = 1,,
+
+;*****************************************
+; VStorBus  Install Section
+;*****************************************
+
+[Manufacturer]
+%StdMfg%=Standard,NTamd64
+
+[Standard]
+;
+; These are the virtual storage bus pnp ids
+;
+
+%VStorBus.DeviceDesc%=VStorBus_Device, root\vhdbus
+
+[Standard.NTamd64]
+;
+; These are the virtual storage bus pnp ids
+;
+
+%VStorBus.DeviceDesc%=VStorBus_Device, root\vhdbus
+
+[VStorBus_Device.NT]
+CopyFiles=Drivers_Dir
+
+[VStorBus_Device.NT.HW]
+AddReg=VStorBus_Device.NT.AddReg
+
+[VStorBus_Device.NT.AddReg]                            
+HKR,,DeviceCharacteristics,0x10001,0x0100         ; Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)"      ; Allow generic-all access to Built-in administrators and Local system 
+
+;-------------- Coinstaller installation
+[VStorbus_Device.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01005.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01005.dll,WdfCoInstaller"
+
+[VStorbus_Device.NT.Wdf]
+KmdfService=vhdbus, vStorbus_wdfsect
+
+[VStorbus_wdfsect]
+KmdfLibraryVersion = 1.0
+
+[Drivers_Dir]
+vhdbus.sys
+
+;-------------- Service installation
+[VStorBus_Device.NT.Services]
+AddService = vhdbus,%SPSVCINST_ASSOCSERVICE%, vhdbus_Service_Inst
+
+; -------------- vhdbus driver install sections
+[vhdbus_Service_Inst]
+DisplayName    = %vhdbus.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\vhdbus.sys
+LoadOrderGroup = Extended Base
+
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+MSFT = "Microsoft"
+StdMfg = "(Standard system devices)"
+DiskId1 = "Virtual Storage Bus Installation Disk #1"
+VStorBus.DeviceDesc = "Microsoft Virtual Server Storage Bus"
+vhdbus.SVCDESC = "Microsoft Virtual Server Storage Bus"
+

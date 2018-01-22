@@ -1,0 +1,114 @@
+﻿;
+;vhdstor.INF file
+;
+
+[Version]
+signature="$WINDOWS NT$"
+Class = HDC 
+ClassGuid = {0A8BA9F6-C0BA-432f-982E-54317F7D4A1B}
+Provider=%Mfg%
+CatalogFile=vhdstor.cat
+DriverVer= 08/20/2008,1.1.651.0
+
+[SourceDisksNames]
+1=%DiskId%
+
+[SourceDisksFiles]
+vhdstor.sys=1,,
+vhdstorlog.dll=1,,
+
+[DestinationDirs]
+DefaultDestDir 		 = 12
+VHDStor.CopyFiles.Sys	 = 12   ; %windir%\System32\drivers
+VHDStor.CopyFiles.Log	 = 11	; %windir%\System32
+
+
+[ClassInstall32]
+Addreg=ToasterClassReg     
+
+[ToasterClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,"-9"
+HKR,,DeviceCharacteristics,0x10001,0x100        ; Use same security checks on relative opens
+
+[Manufacturer]
+%Mfg%=Microsoft,NTamd64
+
+[Microsoft]
+%DeviceDesc% = storvscDriveInstall, {0A8BA9F6-C0BA-432f-982E-54317F7D4A1B}\VDisk
+
+[Microsoft.NTamd64]
+%DeviceDesc% = storvscDriveInstall, {0A8BA9F6-C0BA-432f-982E-54317F7D4A1B}\VDisk
+
+[storvscDriveInstall]
+CopyFiles=VHDStor.CopyFiles.Sys, VHDStor.CopyFiles.Log 
+
+[VHDStor.CopyFiles.Sys]
+vhdstor.sys
+
+[VHDStor.CopyFiles.Log]
+vhdstorlog.dll
+
+[storvscDriveInstall.Services]
+AddService = "vhdstor",%SPSVCINST_ASSOCSERVICE%,storvsc_Service_Inst,EventLogging
+
+[EventLogging]
+AddReg=EventLogAddReg
+
+[EventLogAddReg]
+HKR,,EventMessageFile,0x00020000,"%10%\System32\vhdstorlog.dll;%10%\system32\drivers\vhdstor.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[storvsc_Service_Inst]
+ServiceType   = %SERVICE_KERNEL_DRIVER%
+StartType     = %SERVICE_DEMAND_START%
+ErrorControl  = %SERVICE_ERROR_NORMAL%
+LoadOrderGroup = "Base"
+ServiceBinary = %12%\vhdstor.sys 
+
+[Strings]
+Mfg = "Microsoft."
+DeviceDesc = "Microsoft Virtual Server Storage Devices"
+DiskId = "Install disk (1)"
+ClassName = "Microsoft Virtual Server Storage Devices"
+
+;
+; The "standard" defines
+;
+SPSVCINST_TAGTOFRONT               = 0x00000001
+SPSVCINST_ASSOCSERVICE             = 0x00000002
+SPSVCINST_DELETEEVENTLOGENTRY      = 0x00000004
+SPSVCINST_NOCLOBBER_DISPLAYNAME    = 0x00000008
+SPSVCINST_NOCLOBBER_STARTTYPE      = 0x00000010
+SPSVCINST_NOCLOBBER_ERRORCONTROL   = 0x00000020
+SPSVCINST_NOCLOBBER_LOADORDERGROUP = 0x00000040
+SPSVCINST_NOCLOBBER_DEPENDENCIES   = 0x00000080
+SPSVCINST_NOCLOBBER_DESCRIPTION    = 0x00000100
+
+COPYFLG_WARN_IF_SKIP         = 0x00000001
+COPYFLG_NOSKIP               = 0x00000002
+COPYFLG_NOVERSIONCHECK       = 0x00000004
+COPYFLG_FORCE_FILE_IN_USE    = 0x00000008
+COPYFLG_NO_OVERWRITE         = 0x00000010
+COPYFLG_NO_VERSION_DIALOG    = 0x00000020
+COPYFLG_OVERWRITE_OLDER_ONLY = 0x00000040
+COPYFLG_REPLACEONLY          = 0x00000400
+COPYFLG_REPLACE_BOOT_FILE    = 0x00001000
+COPYFLG_NOPRUNE              = 0x00002000
+
+SERVICE_KERNEL_DRIVER      = 0x00000001
+SERVICE_FILE_SYSTEM_DRIVER = 0x00000002
+
+SERVICE_BOOT_START   = 0x00000000
+SERVICE_SYSTEM_START = 0x00000001
+SERVICE_AUTO_START   = 0x00000002
+SERVICE_DEMAND_START = 0x00000003
+SERVICE_DISABLED     = 0x00000004
+
+SERVICE_ERROR_IGNORE   = 0x00000000
+SERVICE_ERROR_NORMAL   = 0x00000001
+SERVICE_ERROR_SEVERE   = 0x00000002
+SERVICE_ERROR_CRITICAL = 0x00000003
+
+
+

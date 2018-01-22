@@ -1,0 +1,27 @@
+{
+	Context = {
+		MainMenu = {
+			Disabled = YES;
+		};
+		VirtualPartition = {
+			Disabled = YES;
+		};
+		VirtualDisk = {
+			Disabled = NO;
+			Label = Contig;
+			Tooltip = "Defragment VHD file on disk";
+			ProgramExecutable = "plugins/contig/contig.exe";
+			ProgramArguments = "-v %VHD_FILE%";
+			"ProgramWorkingDirectory" = "";
+		};
+	};
+	Download = {
+		BundleName = "com.sysinternals.live.contig";
+		InstalledFileCheck = "plugins/contig/contig.exe";
+		Name = Contig;
+		DownloadUrl = "http://live.sysinternals.com/Contig.exe";
+		ManualDownloadUrl = "http://technet.microsoft.com/en-us/sysinternals/bb897428";
+		Description = "[i]Contig[/i] is a single-file defragmenter that attempts to make files contiguous on disk. Its perfect for quickly optimizing files that are continuously becoming fragmented, or that you want to ensure are in as few fragments as possible.\n\n[i]Contig[/i] can be used to defrag an existing file, or to create a new file of a specified size and name, optimizing its placement on disk. Contig uses standard Windows defragmentation APIs so it won't cause disk corruption, even if you terminate it while its running.";
+		DownloadTo = "plugins/contig/contig.exe";
+	};
+}
